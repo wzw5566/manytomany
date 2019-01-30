@@ -31,7 +31,7 @@ class UserProfile(AbstractUser):
     """
     name = models.CharField(max_length=30, verbose_name="姓名" )
     avatar = models.CharField(max_length=100, null=True, blank=True, verbose_name="头像")
-    roles = models.ManyToManyField(Role, verbose_name="角色", related_name='role_name', )
+    roles = models.ManyToManyField(Role, verbose_name="角色", related_name='roles', )
 
     class Meta:
         verbose_name = "用户"
